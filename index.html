@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Currency Converter - Convert your currrency</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Poppins:wght@400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            display: flex;
+            font-size: 20px;
+            background-color: rgb(242, 209, 245);
+            padding: 23px;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(2, 3, 18);
+            transition: all;
+            transition-duration: 300ms;
+        }
+
+        nav ul li a:hover {
+            color: rgb(107, 28, 234);
+        }
+
+        .container {
+            min-height: calc(100vh - 163px);
+            font-family: 'Poppins', sans-serif;
+            max-width: 80vw;
+            margin: 20px auto;
+        }
+
+        .container h1,
+        h2 {
+            text-align: center;
+            margin: 23px 0;
+        }
+
+        .container form {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            padding: 40px 20px;
+            margin: 20px auto;
+            box-shadow: 1px 1px 8px #6c6a6a;
+        }
+
+        .container form label {
+            font-size: 25px;
+        }
+
+        .container form input[type="number"],
+        select {
+            width: 100%;
+            font-size: 25px;
+            margin-bottom: 23px;
+            padding: 5px;
+        }
+
+        .btn {
+            width: 144px;
+            padding: 11px 15px;
+            font-size: 20px;
+            background-color: rgb(242, 209, 245);
+            border: 1px solid rgb(242, 209, 245);
+            color: #000;
+            border-radius: 13px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .output {
+            display: none;
+        }
+
+        .output table {
+            width: 50vw;
+            text-align: center;
+            border: 2px solid #000;
+            font-size: 20px;
+            border-collapse: collapse;
+            text-align: center;
+            margin: auto;
+        }
+
+        .output table tr {
+            border: 2px solid #000;
+            cursor: pointer;
+        }
+
+        .output table tr th {
+            cursor: default;
+            background-color: rgb(242, 209, 245);
+        }
+
+        .output table tr th,
+        .output table tr td {
+            padding: 10px;
+
+        }
+
+        .output table tr:hover {
+            background-color: #ecf0f1;
+        }
+
+        footer {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(242, 209, 245);
+            padding: 10px;
+        }
+
+        @media (max-width: 480px) {
+
+            .container h1,
+            h2 {
+                font-size: 20px;
+            }
+
+            .container form {
+                width: 100%;
+            }
+
+            .container form label {
+                font-size: 20px;
+            }
+
+            .container form input[type="number"],
+            select {
+                font-size: 20px;
+            }
+
+            .btn {
+                width: 100%;
+                font-size: 15px;
+            }
+
+            .output table {
+                font-size: 13px;
+            }
+
+            .output table tr th,
+            .output table tr td {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">MyCurrencyConverter</div>
+        <!-- <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul> -->
+    </nav>
+
+    <div class="container">
+        <h1>Choose a currency to convert</h1>
+        <form action="/action.php" method="get">
+            <label for="quantity">Choose a quantity: </label>
+            <input type="number" name="quantity" min="1" max="10">
+            <label for="currency">Choose a currency: </label>
+            <select name="currency">
+
+            </select>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+        <div class="output">
+            <h2>Here is your conerted values in different currencies</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Currency</th>
+                        <th>Currency Code</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        Copyright &copy; All rights reserved
+    </footer>
+
+    <script>
+
+    </script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
